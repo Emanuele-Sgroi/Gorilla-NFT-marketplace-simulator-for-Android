@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TermCondActivity">
+
+    <RelativeLayout
+        android:id="@+id/app__terms_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_light_grey"
+        android:elevation="5dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/app__terms_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:letterSpacing="0.1"
+            android:text="Terms and Conditions"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app__terms_top_bar"
+        android:layout_marginTop="30dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="Terms and Conditions are unavailable"/>
+
+</RelativeLayout>

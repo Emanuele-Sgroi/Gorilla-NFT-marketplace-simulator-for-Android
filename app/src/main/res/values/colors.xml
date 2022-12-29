@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MY COLOR -->
+    <color name="grey_01_color">#D2D4DA</color>
+    <color name="bg_light_grey">#D4D9DE</color>
+    <color name="bg_light_grey2">#D6DBDF</color>
+    <color name="almost_black_text">#222222</color>
+    <color name="info_grey_text">#636363</color>
+    <color name="hint_text">#828282</color>
+    <color name="logo_purple">#7335B8</color>
+    <color name="unavailable1">#B5B5B5</color>
+    <color name="error_red">#C00127</color>
+    <color name="error_red2">#D80101</color>
+    <color name="toast_color">#343842</color>
+    <color name="category_button">#B7BDC3</color>
+    <color name="green_approved">#289F28</color>
+
+    <!-- DEFAULT COLOR -->
+    <color name="purple_500">#FF6200EE</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

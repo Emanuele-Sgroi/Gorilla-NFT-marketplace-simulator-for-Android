@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bg_light_grey"
+    >
+
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="155dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="533dp"
+        app:srcCompat="@drawable/logo_text_horiz" />
+
+    <LinearLayout
+        android:id="@+id/app__main_email_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="261dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/user_login_icon"
+            android:layout_marginEnd="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/app__main_login_user_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColorHint="@color/hint_text"
+            app:backgroundTint="@color/almost_black_text"
+            android:paddingEnd="5dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textColor="@color/almost_black_text"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/app__main_password_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/app__main_email_login_layout"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/password_login_icon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/app__main_login_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColorHint="@color/hint_text"
+            app:backgroundTint="@color/almost_black_text"
+            android:drawableRight="@drawable/icon_visible_off"
+            android:longClickable="false"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textColor="@color/almost_black_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/app__main_remember_forgot_ll"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app__main_password_login_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <com.rey.material.widget.CheckBox
+            android:id="@+id/app__main_checkbox_remember_me"
+            style="@style/Material.Drawable.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Remember me"
+            android:textColor="@color/almost_black_text"
+            android:textSize="15sp"
+            app:cbd_strokeColor="@color/almost_black_text"
+            app:cbd_tickColor="@color/logo_purple" />
+
+        <TextView
+            android:id="@+id/app__main_login_forgot_password_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Forgot password?"
+            android:textColor="@color/almost_black_text"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/app__main_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/app__main_remember_forgot_ll"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/login_signup_btn"
+        android:text="@string/login"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        android:focusableInTouchMode="true"
+        />
+
+    <TextView
+        android:id="@+id/app__main_text_nothaveaccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app__main_login_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="17dp"
+        android:text="@string/don_t_you_have_an_account_yet"
+        android:textAlignment="center"
+        android:textColor="@color/almost_black_text"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/app__main_signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/app__main_text_nothaveaccount"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/login_signup_btn"
+        android:text="SIGN UP"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        android:focusableInTouchMode="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="I am not an admin"
+        android:layout_above="@+id/app__main_check_admin_ll"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/almost_black_text"
+        android:visibility="invisible"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/app__main_check_admin_ll"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/app__main_landing_page_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="Gorilla NFT"
+                android:textColor="@color/logo_purple"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="marketplace"
+                android:textColor="@color/almost_black_text"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    tools:context=".SellerAddNewNftActivity">
+
+    <LinearLayout
+        android:id="@+id/app__seller_add_nft_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/app__seller_add_nft_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textColor="@color/error_red2"
+            android:letterSpacing="0.05"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        android:layout_below="@id/app__seller_add_nft_top_ll"
+        android:layout_marginTop="3dp"
+        app:tint="@color/unavailable1"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app__seller_add_nft_top_ll">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/app__seller_add_nft_header_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Add a new"
+                    android:textColor="@color/almost_black_text"
+                    android:letterSpacing="0.05"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="NFT"
+                    android:textColor="@color/logo_purple"
+                    android:letterSpacing="0.05"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="to your listing"
+                    android:textColor="@color/almost_black_text"
+                    android:letterSpacing="0.05"
+                    android:textSize="20sp"
+
+                    android:layout_marginEnd="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/app__seller_add_nft_preview_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/app__seller_add_nft_header_ll"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/app__seller_add_nft_preview_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="NFT preview image"
+                    android:textColor="@color/almost_black_text"
+                    android:textSize="17sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/app__seller_add_nft_preview_image"
+                    android:layout_width="280dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/tap_here"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="centerInside"
+                    android:cropToPadding="false"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app__seller_add_nft_preview_ll"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_name_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="35dp"
+                    android:paddingEnd="35dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_icon" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/app__seller_add_nft_name_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="NFT name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/almost_black_text"
+                        android:textColorHint="@color/hint_text"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        app:backgroundTint="@color/almost_black_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_category_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="35dp"
+                    android:paddingEnd="35dp"
+                    android:layout_below="@+id/app__seller_add_nft_name_container">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/category_icon" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="Select category"
+                        android:textColor="@color/almost_black_text"
+                        android:textSize="17dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_category"
+                        android:backgroundTint="@color/white"
+                        android:paddingStart="5dp">
+
+                        <Spinner
+                            android:id="@+id/app__seller_add_nft_spinner_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="name"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_token_address_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="35dp"
+                    android:paddingEnd="35dp"
+                    android:layout_below="@+id/app__seller_add_nft_category_container">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/transactions_icon" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/app__seller_add_nft_token_address_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Token address"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/almost_black_text"
+                        android:textColorHint="@color/hint_text"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        app:backgroundTint="@color/almost_black_text"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app__seller_add_nft_token_address_container"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="-9dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/token_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Where this NFT is stored"
+                        android:textColor="@color/almost_black_text" />
+
+
+                    <Button
+                        android:id="@+id/app__seller_add_nft_address_detail_btn"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/info_question_mark"
+                        android:text="?"
+                        android:textColor="@color/purple_500"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_price_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_below="@+id/app__seller_add_nft_token_address_container"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="35dp"
+                    android:paddingEnd="35dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/ethereum_icon" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/app__seller_add_nft_eth_price_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Price in ETH"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/almost_black_text"
+                        android:textColorHint="@color/hint_text"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        app:backgroundTint="@color/almost_black_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app__seller_add_nft_price_container"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="-9dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/app__seller_add_nft_price_currency_instance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0 ETH = 0$"
+                        android:textColor="@color/almost_black_text" />
+
+
+                    <Button
+                        android:id="@+id/app__seller_add_nft_price_detail_btn"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/info_question_mark"
+                        android:text="?"
+                        android:textColor="@color/purple_500"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@drawable/line"
+                    android:layout_below="@id/app__seller_add_nft_price_container"
+                    android:layout_marginTop="30dp"
+                    app:tint="@color/unavailable1"/>
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_fees_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app__seller_add_nft_price_container"
+                    android:layout_marginTop="40dp"
+                    android:gravity="start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Fees"
+                        android:textSize="17dp"
+                        android:textColor="@color/almost_black_text"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"/>
+                    <Button
+                        android:id="@+id/app__seller_add_nft_fees_detail_btn"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/info_question_mark"
+                        android:text="?"
+                        android:textColor="@color/purple_500"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_fees_gorillanft_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app__seller_add_nft_fees_text"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="Gorilla NFT ..............................................  2.50%"
+                        android:textSize="17dp"
+                        android:textColor="@color/hint_text"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_fees_creator_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app__seller_add_nft_fees_gorillanft_text"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="Creator Royalty ..........................................  10%"
+                        android:textSize="17dp"
+                        android:textColor="@color/hint_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_earning_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app__seller_add_nft_fees_creator_text"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="Total Earnings"
+                        android:textSize="17dp"
+                        android:textColor="@color/almost_black_text"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/app__seller_add_nft_earning_eth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 ETH"
+                            android:textSize="17dp"
+                            android:textColor="@color/almost_black_text"
+                            />
+                        <TextView
+                            android:id="@+id/app__seller_add_nft_earning_dollars"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0$"
+                            android:textSize="17dp"
+                            android:textColor="@color/hint_text"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_you_pay_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app__seller_add_nft_earning_text"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="Total Payment"
+                        android:textSize="17dp"
+                        android:textColor="@color/almost_black_text"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/app__seller_add_nft_payment_eth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 ETH"
+                            android:textSize="17dp"
+                            android:textColor="@color/almost_black_text"
+                            />
+                        <TextView
+                            android:id="@+id/app__seller_add_nft_payment_dollars"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0$"
+                            android:textSize="17dp"
+                            android:textColor="@color/hint_text"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/line_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@drawable/line"
+                    android:layout_below="@id/app__seller_add_nft_you_pay_text"
+                    android:layout_marginTop="15dp"
+                    app:tint="@color/unavailable1"/>
+
+                <TextView
+                    android:id="@+id/app__seller_add_nft_big_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_payment"
+                    android:layout_marginTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:text="You will be charged directly from the same wallet where your NFT is store. Please make sure you have enough founds for this transaction."
+                    android:textAlignment="center"
+                    android:textColor="@color/hint_text"
+                    android:textSize="17sp"/>
+
+                <LinearLayout
+                    android:id="@+id/important_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_below="@+id/app__seller_add_nft_big_text"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Important:"
+                        android:textColor="@color/almost_black_text"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="If you are the creator of this NFT, we will refund the Royalty Fee"
+                        android:textColor="@color/almost_black_text"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app__seller_add_nft_checkbox_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_below="@+id/important_message"
+                    android:layout_marginTop="20dp">
+
+                    <com.rey.material.widget.CheckBox
+                        android:id="@+id/app__seller_add_nft_checkbox_agree"
+                        style="@style/Material.Drawable.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="I accept the"
+                        android:textColor="@color/almost_black_text"
+                        android:textSize="17sp"
+                        app:cbd_strokeColor="@color/almost_black_text"
+                        app:cbd_tickColor="@color/logo_purple" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Gorilla NFT Agreement"
+                        android:textAlignment="center"
+                        android:textColor="@color/logo_purple"
+                        android:textSize="17sp"/>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/app__seller_add_nft_add_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/app__seller_add_nft_checkbox_ll"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/login_signup_btn"
+                    android:text="Pay &amp; finish"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.2"
+                    android:focusableInTouchMode="true"
+                    />
+
+                <!--
+                 <TextView
+                    android:id="@+id/test10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="test"
+                    android:layout_below="@+id/app__seller_add_nft_add_button"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="20dp"/>
+                 -->
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

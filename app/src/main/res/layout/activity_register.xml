@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    tools:context=".RegisterActivity">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:auto_cycle="true"
+        app:delay="0"
+        app:period="2000"
+        app:placeholder="@color/black"
+        app:error_image="@color/logo_purple"
+        android:id="@+id/app__register_image_slider"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:corner_radius="20"
+        android:gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:id="@+id/app__register_username_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/app__register_image_slider"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/user_login_icon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/app__register_username_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username "
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColor="@color/almost_black_text"
+            android:textColorHint="@color/hint_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:backgroundTint="@color/almost_black_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app__register_username_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-9dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/app__register_username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min 4 - Max 15 characters"
+            android:textColor="@color/almost_black_text"
+            />
+
+        <Button
+            android:id="@+id/app__register_info_username_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/info_question_mark"
+            android:text="?"
+            android:textColor="@color/purple_500"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/app__register_email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/app__register_username_layout"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/email_icon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/app__register_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email address"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColor="@color/almost_black_text"
+            android:textColorHint="@color/hint_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:backgroundTint="@color/almost_black_text" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app__register_email_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app__register_email_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-9dp"
+        android:text="Must be in a correct format @"
+        android:textColor="@color/almost_black_text" />
+
+    <LinearLayout
+        android:id="@+id/app__register_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/app__register_email_layout"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/phone_icon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/app__register_phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone number"
+            android:inputType="number|none"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColor="@color/almost_black_text"
+            android:textColorHint="@color/hint_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:backgroundTint="@color/almost_black_text" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app__register_phone_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app__register_phone_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-9dp"
+        android:text="Without prefix"
+        android:textColor="@color/almost_black_text" />
+    <LinearLayout
+        android:id="@+id/app__register_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/app__register_phone_layout"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/password_login_icon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/app__register_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColorHint="@color/hint_text"
+            app:backgroundTint="@color/almost_black_text"
+            android:drawableRight="@drawable/icon_visible_off"
+            android:longClickable="false"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textColor="@color/almost_black_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app__register_password_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-9dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/app__register_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min 6 - Max 15 characters"
+            android:textColor="@color/almost_black_text" />
+
+
+        <Button
+            android:id="@+id/app__register_info_password_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/info_question_mark"
+            android:text="?"
+            android:textColor="@color/purple_500"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/app__register_password_confirm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/app__register_password_layout"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/password_login_icon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/app__register_password_confirm_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm password"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColorHint="@color/hint_text"
+            app:backgroundTint="@color/almost_black_text"
+            android:drawableRight="@drawable/icon_visible_off"
+            android:longClickable="false"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textColor="@color/almost_black_text"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app__register_password_confirm_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app__register_password_confirm_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-9dp"
+        android:text="Passwords must match"
+        android:textColor="@color/almost_black_text" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        android:layout_below="@id/app__register_password_confirm_layout"
+        android:layout_marginTop="25dp"
+        app:tint="@color/unavailable1"/>
+
+    <LinearLayout
+        android:id="@+id/app__register_terms_conditions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app__register_password_confirm_layout"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/almost_black_text"
+            android:text='By clicking "Create Account" you agree to our ' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='Terms &amp; Conditions'
+            android:textColor="@color/logo_purple"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/app__register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/app__register_terms_conditions_layout"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/login_signup_btn"
+        android:text="CREATE ACCOUNT"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        android:focusableInTouchMode="true"
+        />
+</RelativeLayout>

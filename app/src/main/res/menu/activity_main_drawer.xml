@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/app__nav_cart"
+            android:icon="@drawable/cart_icon"
+            android:title="Cart" />
+        <item
+            android:id="@+id/app__nav_whishlist"
+            android:icon="@drawable/wishlist_icon"
+            android:title="Wishlist"
+            />
+        <item
+            android:id="@+id/app_nav_transactions"
+            android:icon="@drawable/transactions_icon"
+            android:title="Transactions" />
+        <item
+            android:id="@+id/app_nav_account"
+            android:icon="@drawable/user_setting_icon"
+            android:title="Account" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/app__nav_sell"
+            android:icon="@drawable/sell_icon"
+            android:title="Sell NFTs" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/app__nav_help"
+            android:icon="@drawable/help_icon"
+            android:title="Help center" />
+        <item
+            android:id="@+id/app__nav_terms"
+            android:icon="@drawable/terms_icon"
+            android:title="Terms and Conditions " />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/app__nav_delete_account"
+            android:icon="@drawable/delete_account_icon"
+            android:title="Delete account"
+            />
+        <item
+            android:id="@+id/app__nav_logout"
+            android:icon="@drawable/logout_icon"
+            android:title="Log out"
+            />
+
+    </group>
+
+</menu>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    tools:context=".AdminReadInquiryActivity">
+
+    <RelativeLayout
+        android:id="@+id/message_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/almost_black_text"
+        android:elevation="5dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/message_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/message_top_bar">
+
+        <LinearLayout
+            android:id="@+id/in1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message from"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/hint_text"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/read_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/almost_black_text"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/in2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/in1"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User email:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/hint_text"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/read_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mail@email.com"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/almost_black_text"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/in3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/in2"
+            android:text="Subject"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/hint_text"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/read_subject_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/in3"
+            android:text="Lorem Ipsum"
+            android:background="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/almost_black_text"
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/in4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/read_subject_output"
+            android:text="Message"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/hint_text"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/read_message_output"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/in4"
+            android:text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:textColor="@color/almost_black_text"
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

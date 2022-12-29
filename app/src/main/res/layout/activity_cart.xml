@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <RelativeLayout
+        android:id="@+id/cart_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/logo_purple"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/cart_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:letterSpacing="0.1"
+            android:text="CART"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp">
+
+            <ImageView
+                android:id="@+id/cart_logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/floating_cart"
+                android:backgroundTint="@color/white"/>
+
+            <TextView
+                android:id="@+id/cart_quantity"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cart_logo"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="-20dp"
+                android:elevation="10dp"
+                android:scaleType="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/almost_black_text"
+                android:gravity="center"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cart_top_bar"
+        android:layout_above="@+id/cart_bottom_bar">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/cart_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_light_grey">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@drawable/line"
+            app:tint="@color/unavailable1"
+            android:elevation="5dp"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/cart_eth_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/almost_black_text"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="2.45 ETH"/>
+
+        <TextView
+            android:id="@+id/cart_dollar_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/cart_eth_total_price"
+            android:textColor="@color/hint_text"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:text="1954.56$"/>
+
+        <Button
+            android:id="@+id/cart_checkout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/cart_dollar_total_price"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/login_signup_btn"
+            android:text="CHECKOUT"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:focusableInTouchMode="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

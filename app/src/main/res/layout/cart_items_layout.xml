@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_light_grey2">
+
+        <LinearLayout
+            android:id="@+id/img_ll"
+            android:layout_width="140dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/cart_nft_preview"
+                android:layout_width="140dp"
+                android:layout_height="190dp"
+                android:src="@drawable/cry_ape"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/img_ll">
+
+            <TextView
+                android:id="@+id/nft_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="God of War"
+                android:textStyle="bold"
+                android:textColor="@color/almost_black_text"
+                android:letterSpacing="0.05"
+                android:textSize="22sp"/>
+            <TextView
+                android:id="@+id/nft_seller_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By seller"
+                android:textColor="@color/almost_black_text"
+                android:letterSpacing="0.05"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/nft_address_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0xG16hqy9OlpMm09"
+                android:textStyle="bold"
+                android:textColor="@color/hint_text"
+                android:letterSpacing="0.05"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nft_eth_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2.5 TH"
+                    android:textStyle="bold"
+                    android:textColor="@color/almost_black_text"
+                    android:letterSpacing="0.05"
+                    android:textSize="25sp"
+
+                    android:layout_above="@+id/nft_dollar_price"/>
+
+                <TextView
+                    android:id="@+id/nft_dollar_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1956.19$"
+                    android:textStyle="bold"
+                    android:textColor="@color/hint_text"
+                    android:letterSpacing="0.05"
+                    android:textSize="18sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:id="@+id/delete_item_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/remove_from_cart"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

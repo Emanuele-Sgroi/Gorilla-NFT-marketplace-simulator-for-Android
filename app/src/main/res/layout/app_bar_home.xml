@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Gorilla_NFT_app.AppBarOverlay"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app__toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/bg_light_grey"
+                app:popupTheme="@style/Theme.Gorilla_NFT_app.PopupOverlay" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_text_horiz" />
+            <ImageView
+                android:id="@+id/search_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/search_icon" />
+        </RelativeLayout>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/app__bar_home_floating_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:scaleType="center"
+        app:srcCompat="@drawable/cart_icon"
+        app:backgroundTint="@color/grey_01_color"
+        app:maxImageSize="38dp"
+        />
+
+    <TextView
+        android:id="@+id/home_cart_quantity"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/app__bar_home_floating_cart"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="10dp"
+        android:scaleType="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:background="@drawable/circle"
+        android:gravity="center"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

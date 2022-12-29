@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminListingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/listings_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/almost_black_text"
+        android:layout_alignParentTop="true"
+        >
+
+
+
+        <Button
+            android:id="@+id/listings_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+        <TextView
+            android:id="@+id/listing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listings"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/admin_search_shape"
+            android:layout_below="@+id/listing_text"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/listings_search_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:backgroundTint="@color/almost_black_text"
+                android:background="@drawable/search_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:id="@+id/listings_search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="85dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Search NFTs"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingEnd="5dp"
+                android:textColor="@color/almost_black_text"
+                android:textColorHint="@color/hint_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/listing_reset_text"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/x_shape"
+                android:src="@drawable/close2_white"
+                android:padding="10dp"
+                />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@drawable/line"
+            android:layout_alignParentBottom="true"
+            app:tint="@color/unavailable1"
+            android:elevation="5dp"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/admin_listing_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/listings_top_layout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

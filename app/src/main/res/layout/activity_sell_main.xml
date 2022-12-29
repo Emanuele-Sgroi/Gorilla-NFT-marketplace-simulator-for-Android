@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sellMainActivity">
+
+    <RelativeLayout
+        android:id="@+id/app__activity_sell_main_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_light_grey"
+        android:elevation="5dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/app__activity_sell_main_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Selling Activity"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app__activity_sell_main_top_bar">
+
+        <RelativeLayout
+            android:id="@+id/seller_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:gravity="center"
+
+            android:orientation="vertical"
+            android:background="@drawable/nav_bg">
+
+            <LinearLayout
+                android:id="@+id/l_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/app__activity_sell_main_user_profile_picture"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/user_profile_temp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/logo_purple"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp">
+
+                    <TextView
+                        android:id="@+id/app__activity_sell_main_nftsold_text"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Sell NFT and get the best experience"
+                        android:textColor="@color/hint_text"
+                        android:letterSpacing="0.1"
+                        android:textSize="15sp"
+                        android:textAllCaps="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/app__activity_sell_main_seller_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/app__activity_sell_main_nftsold_text"
+                        android:text="Seller"
+                        android:textColor="@color/hint_text"
+                        android:letterSpacing="0.1"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/app__activity_sell_main_username_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/app__activity_sell_main_seller_text"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginBottom="3dp"
+                        android:letterSpacing="0.1"
+                        android:text="username"
+                        android:textColor="@color/logo_purple"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/l_top"
+                >
+
+                <Button
+                    android:id="@+id/app__activity_sell_main_sell_btn"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_category"
+                    android:backgroundTint="@color/white"
+                    android:text="+ Sell NFTs"
+                    android:textAlignment="center"
+                    android:textColor="@color/almost_black_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:letterSpacing="0.05" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/listing_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/seller_container">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Your listing"
+                android:textStyle="bold"
+                android:textColor="@color/almost_black_text"
+                android:letterSpacing="0.05"
+                android:textSize="17sp"
+                android:textAllCaps="true"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/listing_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line"
+            android:backgroundTint="@color/bg_light_grey2"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/listing_ll"/>
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/seller_content"
+            android:layout_below="@+id/listing_line"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <!--
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nav_header_height"
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:background="@drawable/nav_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/app__activity_sell_main_user_profile_picture"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/user_profile_temp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/logo_purple"
+                        android:layout_marginEnd="5dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_marginStart="5dp">
+
+                        <TextView
+                            android:id="@+id/app__activity_sell_main_nftsold_text"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Sell NFT and get the best experience"
+                            android:textColor="@color/hint_text"
+                            android:letterSpacing="0.1"
+                            android:textSize="15sp"
+                            android:textAllCaps="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/app__activity_sell_main_seller_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_below="@+id/app__activity_sell_main_nftsold_text"
+                            android:text="Seller"
+                            android:textColor="@color/hint_text"
+                            android:letterSpacing="0.1"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/app__activity_sell_main_username_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app__activity_sell_main_seller_text"
+                            android:layout_marginTop="-8dp"
+                            android:layout_marginBottom="3dp"
+                            android:letterSpacing="0.1"
+                            android:text="username"
+                            android:textColor="@color/logo_purple"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <Button
+                        android:id="@+id/app__activity_sell_main_sell_btn"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_category"
+                        android:backgroundTint="@color/white"
+                        android:text="+ Sell NFTs"
+                        android:textAlignment="center"
+                        android:textColor="@color/almost_black_text"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:letterSpacing="0.05" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="start"
+    android:layout_marginTop="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Your listing"
+        android:textStyle="bold"
+        android:textColor="@color/almost_black_text"
+        android:letterSpacing="0.05"
+        android:textSize="17sp"
+        android:textAllCaps="true"/>
+
+</LinearLayout>
+
+            <ImageView
+                android:id="@+id/listing_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line"
+                android:backgroundTint="@color/bg_light_grey2"
+                android:layout_marginTop="3dp"/>
+
+
+
+        </LinearLayout>
+
+    -->
+
+
+
+
+</RelativeLayout>

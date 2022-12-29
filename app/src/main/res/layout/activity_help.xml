@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    tools:context=".HelpActivity">
+
+    <RelativeLayout
+        android:id="@+id/app__activity_help_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_light_grey"
+        android:elevation="5dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/app__activity_help_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="help center"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        android:layout_below="@id/app__activity_help_top_bar"
+        app:tint="@color/unavailable1"
+        android:elevation="5dp"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app__activity_help_top_bar"
+        android:text="For any inquiries use the contact form below."
+        android:textColor="@color/hint_text"
+        android:textSize="20sp"
+        android:letterSpacing="0.05"
+        android:layout_marginTop="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:text="A member of our team will reply to you as soon as possible."
+        android:textColor="@color/hint_text"
+        android:textSize="20sp"
+        android:letterSpacing="0.05"
+        android:layout_marginTop="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        android:layout_below="@id/text2"
+        android:layout_marginTop="15dp"
+        app:tint="@color/unavailable1"/>
+
+    <LinearLayout
+        android:id="@+id/app__activity_help_info_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textColor="@color/almost_black_text"
+            android:textSize="17sp"
+            android:letterSpacing="0.01"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/app__activity_help_username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user here"
+            android:textColor="@color/almost_black_text"
+            android:textSize="17sp"
+            android:letterSpacing="0.01"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="@color/almost_black_text"
+            android:textSize="17sp"
+            android:letterSpacing="0.01"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/app__activity_help_email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email here"
+            android:textColor="@color/almost_black_text"
+            android:textSize="17sp"
+            android:letterSpacing="0.01"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/app__activity_help_subject_input"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/app__activity_help_info_ll"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/help_form"
+        android:elevation="30px"
+        android:hint="Subject"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/hint_text"
+        android:gravity="center_vertical"/>
+
+    <EditText
+        android:id="@+id/app__activity_help_message_input"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/app__activity_help_subject_input"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/help_form"
+        android:elevation="30px"
+        android:hint="Type your message here"
+        android:inputType="textMultiLine"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/hint_text"
+        android:gravity="top"
+        android:scrollbars="vertical"/>
+
+    <Button
+        android:id="@+id/app__activity_help_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/app__activity_help_message_input"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/login_signup_btn"
+        android:text="Submit"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        android:focusableInTouchMode="true"
+        />
+
+</RelativeLayout>

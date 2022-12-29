@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    tools:context=".WishlistActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/wishlist_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_light_grey"
+        android:elevation="5dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/wishlist_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="your wishlist"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        android:layout_below="@id/wishlist_top_bar"
+        app:tint="@color/unavailable1"
+        android:elevation="5dp"/>
+
+    <include
+        android:layout_below="@+id/wishlist_top_bar"
+        layout="@layout/content_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/wishlist_cart_floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        app:srcCompat="@drawable/cart_icon"
+        app:backgroundTint="@color/white"
+        app:maxImageSize="38dp"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        />
+
+    <TextView
+        android:id="@+id/wishlist_cart_quantity"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/wishlist_cart_floating_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="-30dp"
+        android:elevation="10dp"
+        android:scaleType="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:background="@drawable/circle"
+        android:gravity="center"
+        />
+
+
+
+</RelativeLayout>

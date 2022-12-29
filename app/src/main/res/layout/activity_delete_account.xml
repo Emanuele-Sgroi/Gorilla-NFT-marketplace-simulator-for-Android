@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    android:gravity="top"
+    tools:context=".DeleteAccountActivity">
+
+    <TextView
+        android:id="@+id/text_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We are sorry that you want to leave"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        android:textAllCaps="true"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/hint_text"
+        />
+
+    <ImageView
+        android:id="@+id/cry_ape"
+        android:layout_width="260dp"
+        android:layout_height="253dp"
+        android:layout_below="@+id/text_top"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:src="@drawable/cry_ape" />
+
+    <TextView
+        android:id="@+id/text_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cry_ape"
+        android:text="Delete account now"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        android:textAllCaps="false"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/error_red2"
+        />
+
+    <LinearLayout
+        android:id="@+id/buttons_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/text_delete"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/app__delete_yes_btn"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_signup_btn"
+            android:text="yes"
+            android:textAllCaps="true"
+            android:textColor="@color/error_red2"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:focusableInTouchMode="true"
+            />
+
+        <Button
+            android:id="@+id/app__delete_no_btn"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/login_signup_btn"
+            android:text="no"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:focusableInTouchMode="true"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttons_ll"
+        android:text="You can create another account at any time"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:letterSpacing="0.05"
+        android:textAllCaps="false"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/almost_black_text"
+        />
+
+</RelativeLayout>

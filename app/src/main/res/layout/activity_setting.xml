@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    tools:context=".SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/app__settings_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_light_grey"
+        android:elevation="5dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/app__settings_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:rotation="90"
+            android:background="@drawable/go_back_arrow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Account"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/line_settings"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        android:layout_below="@id/app__settings_top_bar"
+        app:tint="@color/unavailable1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line_settings"
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/img_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/app__setting_user_profile_picture"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/user_profile_temp"
+                    app:civ_border_color="@color/logo_purple"
+                    app:civ_border_width="2dp" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/app__setting_edit_image_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/img_ll"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="-50dp"
+                android:src="@drawable/edit_image" />
+
+            <ImageView
+                android:id="@+id/app__setting_save_image_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/img_ll"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-50dp"
+                android:src="@drawable/diskette"
+                android:visibility="invisible"/>
+
+            <!-- username -->
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_ll"
+                android:layout_marginTop="25dp"
+                android:elevation="80dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/user_login_icon" />
+
+                <TextView
+                    android:id="@+id/app__setting_username_text"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:letterSpacing="0.05"
+                    android:text="username"
+                    android:textAlignment="center"
+                    android:textColor="@color/hint_text"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_username_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/edit_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_ll"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:elevation="80dp"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:visibility="invisible">
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/app__setting_username_edit_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginEnd="5dp"
+                    android:maxLines="1"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/almost_black_text"
+                    android:textColorHint="@color/hint_text"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    app:backgroundTint="@color/almost_black_text"
+                    android:hint="Type your new username"
+                    android:inputType="text"
+                    android:letterSpacing="0.05"
+                    android:textSize="17sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_username_cancel_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/close" />
+                <ImageView
+                    android:id="@+id/app__setting_edit_username_save_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="65dp"
+                    android:src="@drawable/diskette" />
+
+            </LinearLayout>
+
+            <!-- username finish-->
+
+
+
+            <!-- email-->
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll1"
+                android:layout_marginTop="25dp"
+                android:elevation="80px"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/email_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/app__setting_email_text"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:letterSpacing="0.05"
+                    android:text="email95@gmail.com"
+                    android:textAlignment="center"
+                    android:textColor="@color/hint_text"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_email_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/edit_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll1"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:visibility="invisible">
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/app__setting_email_edit_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginEnd="5dp"
+                    android:maxLines="1"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/almost_black_text"
+                    android:textColorHint="@color/hint_text"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    app:backgroundTint="@color/almost_black_text"
+                    android:hint="Type your new email"
+                    android:inputType="text"
+                    android:letterSpacing="0.05"
+                    android:textSize="17sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_email_cancel_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/close" />
+                <ImageView
+                    android:id="@+id/app__setting_edit_email_save_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="65dp"
+                    android:src="@drawable/diskette" />
+
+            </LinearLayout>
+
+            <!-- email finish-->
+
+            <!-- phone -->
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:layout_marginTop="25dp"
+                android:elevation="80px"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/phone_icon" />
+
+                <TextView
+                    android:id="@+id/app__setting_phone_text"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:letterSpacing="0.05"
+                    android:text="07734587123"
+                    android:textAlignment="center"
+                    android:textColor="@color/hint_text"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_phone_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/edit_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:visibility="invisible">
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/app__setting_phone_edit_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginEnd="5dp"
+                    android:maxLines="1"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/almost_black_text"
+                    android:textColorHint="@color/hint_text"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    app:backgroundTint="@color/almost_black_text"
+                    android:hint="Type your new phone number"
+                    android:inputType="number|none"
+                    android:letterSpacing="0.05"
+                    android:textSize="17sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_phone_cancel_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/close" />
+                <ImageView
+                    android:id="@+id/app__setting_edit_phone_save_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="65dp"
+                    android:src="@drawable/diskette" />
+
+            </LinearLayout>
+
+            <!-- phone finish-->
+
+            <!-- password-->
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll3"
+                android:layout_marginTop="25dp"
+                android:elevation="80px"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/password_login_icon" />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/hint_text" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_password_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/edit_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll3"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:visibility="invisible">
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/app__setting_password_edit_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginEnd="10dp"
+                    android:maxLines="1"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/almost_black_text"
+                    android:textColorHint="@color/hint_text"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    app:backgroundTint="@color/almost_black_text"
+                    android:hint="Type your new password"
+                    android:inputType="textPassword"
+                    android:letterSpacing="0.05"
+                    android:textSize="17sp"
+                    android:drawableRight="@drawable/icon_visible_off"
+                    />
+
+                <ImageView
+                    android:id="@+id/app__setting_edit_password_cancel_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/close" />
+                <ImageView
+                    android:id="@+id/app__setting_edit_password_save_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="65dp"
+                    android:src="@drawable/diskette" />
+
+            </LinearLayout>
+
+            <!-- password finish-->
+
+            <ImageView
+                android:id="@+id/line_settings2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll4"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/line"
+                app:tint="@color/unavailable1" />
+
+            <LinearLayout
+                android:id="@+id/ll5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_settings2"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+
+                android:paddingBottom="10dp">
+
+
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:letterSpacing="0.05"
+                    android:text="Saved Payment method"
+                    android:textAllCaps="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/hint_text"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/app__setting_add_new_card_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:letterSpacing="0.05"
+                    android:text="Add+"
+                    android:textStyle="bold"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/almost_black_text"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/card_content"
+                android:layout_below="@+id/ll5"
+                android:layout_alignParentBottom="true"/>
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

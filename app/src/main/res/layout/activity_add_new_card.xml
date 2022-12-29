@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
+    tools:context=".AddNewCardActivity">
+
+    <LinearLayout
+        android:id="@+id/app__add_card_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/app__add_card_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textColor="@color/error_red2"
+            android:letterSpacing="0.05"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/line_card"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        android:layout_below="@id/app__add_card_top_ll"
+        android:layout_marginTop="3dp"
+        app:tint="@color/unavailable1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_card"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/cards_accepted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Cards accepted"
+            android:textSize="18dp"
+            android:textColor="@color/almost_black_text"
+            android:letterSpacing="0.05"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+        <LinearLayout
+            android:id="@+id/cards_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cards_accepted"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/visa_logo"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/mastercard_logo"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/amex_logo"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/cardholder_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cardholder"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColor="@color/almost_black_text"
+            android:textColorHint="@color/hint_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:backgroundTint="@color/almost_black_text"
+            android:layout_below="@+id/cards_container"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The owner of the card"
+            android:textColor="@color/almost_black_text"
+            android:layout_below="@+id/cardholder_input"
+            android:layout_marginStart="15dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/card_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card number"
+            android:inputType="number|none"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColor="@color/almost_black_text"
+            android:textColorHint="@color/hint_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:backgroundTint="@color/almost_black_text"
+            android:layout_below="@+id/t1"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The card 16 digits long number"
+            android:textColor="@color/almost_black_text"
+            android:layout_below="@+id/card_number_input"
+            android:layout_marginStart="15dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/t2"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/card_exp_month_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MM"
+                android:inputType="number|none"
+                android:maxLines="1"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/almost_black_text"
+                android:textColorHint="@color/hint_text"
+                android:textCursorDrawable="@drawable/text_cursor"
+                app:backgroundTint="@color/almost_black_text"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/almost_black_text"
+                android:textSize="16sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/card_exp_year_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="YYYY"
+                android:inputType="number|none"
+                android:maxLines="1"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/almost_black_text"
+                android:textColorHint="@color/hint_text"
+                android:textCursorDrawable="@drawable/text_cursor"
+                app:backgroundTint="@color/almost_black_text"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/card_cvv_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="CVV"
+                android:inputType="number|none"
+                android:maxLines="1"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/almost_black_text"
+                android:textColorHint="@color/hint_text"
+                android:textCursorDrawable="@drawable/text_cursor"
+                app:backgroundTint="@color/almost_black_text"
+                android:layout_marginStart="90dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiring date"
+            android:textColor="@color/almost_black_text"
+            android:layout_below="@+id/ll_card"
+            android:layout_marginStart="78dp"
+            />
+
+        <TextView
+            android:id="@+id/t4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card CVV"
+            android:textColor="@color/almost_black_text"
+            android:layout_below="@+id/ll_card"
+            android:layout_marginStart="278dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/card_country_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Country issued"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:textColor="@color/almost_black_text"
+            android:textColorHint="@color/hint_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:backgroundTint="@color/almost_black_text"
+            android:layout_below="@+id/t3"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/t5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The country in which you got the card from"
+            android:textColor="@color/almost_black_text"
+            android:layout_below="@+id/card_country_input"
+            android:layout_marginStart="15dp"
+            />
+
+        <Button
+            android:id="@+id/save_card_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/t5"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/login_signup_btn"
+            android:text="SAVE CARD"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:focusableInTouchMode="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

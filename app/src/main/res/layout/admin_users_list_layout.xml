@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_light_grey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_light_grey"
+        >
+
+        <TextView
+            android:id="@+id/username_of_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/almost_black_text"
+            android:letterSpacing="0.05"/>
+
+        <TextView
+            android:id="@+id/view_username_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:textSize="15sp"
+            android:textColor="@color/error_red2"
+            android:textAllCaps="true"
+            android:letterSpacing="0.02"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/unavailable1" />
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
