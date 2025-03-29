@@ -112,9 +112,9 @@ DatabaseReference WishlistRef;
         formatDollarPrice = 0.0;
         tempEth = 0.0;
 
-        String BASE_URL = "http://api.coinlayer.com/api/live?access_key=ead1fc257461eb0e9bf6d129d871a787&symbols=BTC,ETH";
+        String BASE_URL = "http://api.coinlayer.com/api/live?access_key=xxxxxxxxxxxxxxxxxx&symbols=BTC,ETH";
 
-        String publicKey = "ead1fc257461eb0e9bf6d129d871a787";
+        String publicKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
         String finalUrl = BASE_URL + publicKey + "&TARGET=" +  "&symbols=ETH";
         Log.d("Clima", "Request fail! Status code: " + finalUrl);
         try {
